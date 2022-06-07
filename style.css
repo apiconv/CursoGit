@@ -1,3 +1,51 @@
-.button-container{
-width: 500px;
+.button-container {
+    width: 500px;
+    height: 500px;
+    background-color: #f3f9ff;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -2;
+}
+
+.btn_shadow {
+    background-color: #0c6dff;
+    border: none;
+    width: 80%;
+    height: 25px;
+    border-radius: 0.5rem;
+    outline: none;
+    position: absolute;
+    left: 25px;
+    bottom: 0;
+    filter: blur(15px);
+    z-index: -2;
+    opacity: 0;
+    transition: all ease-in-out 0.2s;
+}
+
+.btn-animated {
+    background-color: #0c6dff;
+    border: none;
+    padding: 0.5rem 3rem;
+    border-radius: 00.5rem;
+    outline: none;
+    position: relative;
+    z-index: 0;
+    transition: all ease-in-out 0.2;
+}
+.btn-animated:hover{
+    cursor: pointer;
+    transform: scale(1.05);    
+}
+
+.btn-animated:hover .btn_shadow{
+    opacity: 1;
+}
+
+.btn-animated span{
+    color: white;
+    font-family:'Poppins', sans-serif ;
+    font-size: 1.2rem;
 }
